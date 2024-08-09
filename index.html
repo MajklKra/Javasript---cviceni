@@ -7,7 +7,47 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Pokus</h1>
+    <div class="container">
+      <br />
+
+      <h1>Nákup letenek</h1>
+
+      <br />
+
+      <form>
+        <br />
+
+        <label for="letenky">Vyber letenku:</label>
+
+        <select name="letenky" id="letenky-vyber">
+          <option value="">--Vyber letenky--</option>
+          <option value="500">Praha 500 Kč</option>
+          <option value="3000">Frankfurt 3000 Kč</option>
+          <option value="30000">Sydney 30000 Kč</option>
+        </select>
+        
+          <select name="pocet-letenek" id="pocet-letenek" class="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <div class="two-way">
+            <input type="checkbox" id="zpatecni" name="zpatecni" />
+            <label for="zpatecni"> Zpáteční letenka </label>
+          </div>
+
+
+      </form>
+    </div>
+
     <script src="./sript.js"></script>
   </body>
 </html>
