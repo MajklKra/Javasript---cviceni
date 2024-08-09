@@ -12,6 +12,7 @@ function vypocet() {
   if (selectedClass) {
     trida = parseFloat(selectedClass.value);
   }
+
   if (back) {
     celkovaCena *= 2;
   }
