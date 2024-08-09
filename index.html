@@ -7,28 +7,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="c1">
       <h1>Letenky</h1>
-      <br />
 
       <form id="booking">
         <fieldset class="field-let">
           <legend>Letenky</legend>
-          <br />
 
           <div class="form-book">
-            <label for="">Mesto</label>
+            <label for="" id="l1">Město:</label>
             <select id="let">
               <option value="500">Praha - 500 Kč</option>
               <option value="3000">Frankfurt - 3000 Kč</option>
               <option value="15000">New York - 15000 Kč</option>
               <option value="30000">Sydney - 30000 Kč</option>
             </select>
-          </div>
-          <br />
 
-          <div class="form-person">
-            <label for="person">Pocet osob:</label>
+            <label for="person" id="l2">Počet osob:</label>
             <select id="person">
               <option value="1">1</option>
               <option value="2">2</option>
@@ -43,17 +38,32 @@
             </select>
           </div>
 
-          <br />
+          <!-- <div class="form-person">
+            <label for="person">Pocet osob:</label>
+            <select id="person">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div> -->
 
-          <div class="form-backFlight">
+          <br />
+          <div class="form-backFlight" id="c2">
             <input type="checkbox" id="backFlight" />
-            <label for="backFlight">Zpatecni let</label>
+            <label for="backFlight" id="l3">Zpáteční let</label>
           </div>
 
           <br />
 
-          <div class="form-class">
-            <label>Class:<br /></label>
+          <div class="form-class" id="c3">
+            <label id="l4">Třída:<br /></label>
             <input type="radio" id="economy" name="class" value="0" checked />
             <label for="economy">Economy class</label><br />
             <input type="radio" id="business" name="class" value="0.25" />
@@ -67,29 +77,28 @@
         <fieldset class="field-result">
           <legend>Kontrola</legend>
 
-          <br />
-          <button type="button" class="resultBtn">Spocitat cenu</button>
-          <br />
+          <button type="button" class="resultBtn">Spočítat cenu</button>
 
-          <div class="result" id="result">Celkova cena: 0 Kč</div>
-          <br />
+          <div class="result" id="result">Celková cena: 0 Kč</div>
 
           <div class="form-money">
-            <label for="amount">Kolik mate penez:</label>
-            <input type="number" id="amount" min="0" step="0.01" />
-            <button type="button" id="checkBtn">Zkontrolovat</button>
+                <label for="amount" id="l5">Kolik mate peněz:</label>
+                <input type="number" id="amount" min="0" step="0.01" />
+                <button type="button" id="checkBtn">Zkontrolovat</button>       
           </div>
+        
+
         </fieldset>
         <br />
 
         <fieldset class="field-notes">
-          <legend>Podnety</legend>
+          <legend>Podněty</legend>
           <div class="form-notes">
             <textarea
               id="notes"
               rows="10"
               cols="40"
-              placeholder="Chcete nam neco sdelit?"
+              placeholder="Chcete nam něco sdělit?"
             ></textarea>
           </div>
         </fieldset>
