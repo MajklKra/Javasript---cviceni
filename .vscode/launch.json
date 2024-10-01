@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:/Users/programator/Desktop/Javasript - cviceni/index.html",
+            "url": "c:/Users/krani/OneDrive/Plocha/JS-form/Javasript---cviceni/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
