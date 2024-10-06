@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -15,60 +16,293 @@ body {
   background-attachment: fixed;
 }
 
-.legend1 {
-  font-weight: bold;
-}
-
 h1 {
   text-align: center;
   margin: 3rem;
   color: white;
 }
 
-#c1 {
+.form-group {
+  display: flex; 
+  align-items: center; 
+  width: calc(50% - 1rem);
+  margin-left: 2rem;
+}
+
+.form-group label {
+  width: 100px; /* Pevná šířka pro všechny labely, aby byly stejně široké */
+  margin-right: 0.5rem; 
+  flex-shrink: 0; /* Zabraňuje zmenšení labelu při nedostatku místa */
+  line-height: 2rem; /* Stejná výška jako select */
+}
+
+.form-group select {
+  flex-grow: 1; 
+  height: 2rem; 
+  margin-left: 0;
+  width: 100%; /* Zajištění plné šířky v rámci flexboxu */
+}
+
+
+/* @media (max-width: 600px) {
+  .form-book {
+      flex-direction: column; 
+  }
+
+  .form-group {
+      width: 100%; 
+  }
+}
+
+@media (max-width: 300px) {
+  #c1 {
+    max-width: 90%; 
+  }
+
+  .form-book {
+    flex-direction: column; 
+  }
+
+  .form-group {
+    width: 100%; 
+  }
+} */
+
+
+@media screen and (max-width: 300px) 
+{
+  body{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 301px)and (max-width: 400px) 
+{
+  #notes{
+    width:96%;
+  }
+
+  #let{
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  #amount{
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  #person {
+    width: 25px;
+    flex: 0 0 100px; /* Nastaví pevnou šířku 100px ve flexboxu */
+  }
+
+ .form-book{
+  width:100%;
   margin: 0 auto;
-  max-width: 60%;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
+
+ }
+
+ .field-result{
+  margin: 0 auto;
 }
 
-#l1 {
-  margin-top: 2rem;
-  margin-left: 2rem;
-  font-weight: bold;
+.field-notes
+{
+  margin: 0 auto;
 }
 
-#let {
-  margin-top: 2rem;
 }
 
-#l2 {
-  margin-left: 2rem;
-  font-weight: bold;
+@media screen and (min-width: 401px) and (max-width: 575px) 
+{
+  #notes{
+    width:96%;
+  }
+
+  #let{
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  #amount {
+    width: 100px;
+    flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+  }
+
+  #person {
+    width: 50px;
+    flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+  }
+
+  .form-book{
+    width:100%;
+    margin: 0 auto;
+   }
+
+   .field-result{
+    margin: 0 auto;
+  }
+
+  .field-notes
+  {
+    margin: 0 auto;
+  }
+
 }
 
-#l3,
-#l4,
-#l5 {
-  font-weight: bold;
+@media screen and (min-width: 576px) and (max-width: 767px) 
+{
+    .field-result{
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .field-notes
+    {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    #notes{
+      width:96%;
+    }
+
+    #let{
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    #amount {
+      width: 100px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+  
+    #person {
+      width: 50px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+
+    .form-book{
+      width:70%;
+      margin: 0 auto;
+     }
 }
 
-#backFlight {
-  margin-left: 2rem;
+@media screen and (min-width: 767px) and (max-width: 991px) 
+{
+  .field-result{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .field-notes
+    {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    #let{
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    #amount {
+      width: 100px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+  
+    #person {
+      width: 50px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+
+    #notes{
+      width:96%;
+    }
+
+    .form-book{
+      width:50%;
+      margin: 0 auto;
+     }
+
 }
 
-#c3 {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+@media screen and (min-width: 992px) and (max-width: 1199px) 
+{
+  .field-result{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .field-notes
+    {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    #let{
+      min-width: 80%;
+      max-width: 100%;
+    }
+
+    #amount {
+      width: 100px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+  
+    #person {
+      width: 50px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+
+    #notes{
+      width:96%;
+    }
+
+    .form-book{
+      width:50%;
+      margin: 0 auto;
+     }
+
 }
 
-.field-let {
-  border-radius: 15px;
-  background-color: gainsboro;
-  opacity: 0.95;
-  color: #4d4d4d;
-  border: 3px solid white;
+@media screen and (min-width: 1200px)
+{
+  .field-result{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .field-notes
+    {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    #let{
+      min-width: 50%;
+      max-width: 100%;
+    }
+
+    #amount {
+      width: 100px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+  
+    #person {
+      width: 50px;
+      flex: 0 0 50px; /* Nastaví pevnou šířku 100px ve flexboxu */
+    }
+
+    #notes{
+      width:96%;
+    }
+
+    .form-book{
+      width:50%;
+      margin: 0 auto;
+     }
 }
 
 .field-result {
@@ -80,7 +314,37 @@ h1 {
   border: 3px solid white;
 }
 
-.resultBtn {
+.field-notes {
+  border-radius: 15px;
+  background-color: gainsboro;
+  color: #4d4d4d;
+  opacity: 0.95;
+  border: 3px solid white;
+}
+
+.form-book {
+  border-radius: 15px;
+  background-color: gainsboro;
+  opacity: 0.95;
+  color: #4d4d4d;
+  border: 3px solid white;
+}
+
+legend {
+  font-weight: bolder;
+  color: skyblue;
+  font-size: x-large;
+}
+
+.form-backFlight{
+ margin-left: 2rem;
+}
+
+.form-class{
+  margin-left: 2rem;
+ }
+
+ .resultBtn {
   margin-bottom: 1rem;
   position: relative;
   left: 50%;
@@ -90,52 +354,60 @@ h1 {
   height: 2rem;
   border-radius: 15px;
   border: 1px solid gray;
+  margin-top: 1rem;
 }
 
-#result {
+ #checkBtn {
   margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-.field-notes {
-  border-radius: 15px;
-  background-color: gainsboro;
-  color: #4d4d4d;
-  opacity: 0.95;
-  border: 3px solid white;
-}
-
-.form-notes {
-  margin: 2rem;
-}
-
-legend {
-  font-weight: bolder;
-  color: skyblue;
-  font-size: x-large;
-}
-
-#checkBtn {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: bold;
   width: 10rem;
   height: 2rem;
   border-radius: 15px;
   border: 1px solid gray;
+  margin-top: 5rem;
+} 
 
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -0%);
+.field-result label {
+  width: 100px; /* Pevná šířka pro všechny labely, aby byly stejně široké */
+  margin-right: 0.5rem; 
+  flex-shrink: 0; /* Zabraňuje zmenšení labelu při nedostatku místa */
+  line-height: 2rem; /* Stejná výška jako select */
 }
 
-#amount {
-  width: 10rem;
+#amount{
+  flex-grow: 1; 
+  height: 2rem; 
+  margin-left: 0;
+  /* width: 100%; /* Zajištění plné šířky v rámci flexboxu */ 
+}
+
+#notes{
+  resize: none;
+  margin: 1rem auto;
+  display: block; 
+  border-radius: 5px;
+  padding: 10px;
+  font-size: large
+}
+
+#notes::placeholder{
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+#sendOut {
+  margin-bottom: 1rem;
+  position: relative;
+  /* left: 18%;
+  transform: translate(-50%, -50%); */
+  margin-left: 1rem;
+  font-weight: bold;
+  width: 5rem;
   height: 2rem;
-}
-
-#economy,#business, #royal{
-  margin-bottom: 0.75rem;
-}
-
-#economy{
-  margin-top: 1rem;;
-}
+  border-radius: 15px;
+  border: 1px solid gray;
+  margin-top: 0.5rem;
+} 

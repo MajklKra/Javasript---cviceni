@@ -35,10 +35,14 @@ function rozpocet() {
     resultDiv.textContent = `Celková cena: ${celaCena.toFixed(
       2
     )} Kč. Vaše částka je dostatečná.`;
+    resultDiv.style.color = "blue";
+    resultDiv.style.fontWeight = "bold"
   } else {
     resultDiv.textContent = `Celková cena: ${celaCena.toFixed(
       2
     )} Kč. Vaše částka nestačí.`;
+    resultDiv.style.color = "red";
+    resultDiv.style.fontWeight = "bold"
   }
 }
 
@@ -62,3 +66,36 @@ function validuj(event) {
 }
 
 document.querySelector("#notes").addEventListener("input", validuj);
+
+/* document.getElementById("sendOut").addEventListener("click", function () {
+  document.getElementById("message").textContent = "Zpráva byla odeslána!";
+  document.getElementById("message").style.color="green";
+  document.getElementById("notes").value = "";
+  // Po 10 sekundách odstraní zprávu
+  setTimeout(function () {
+    document.getElementById("message").textContent = "";
+  }, 10000);
+}); */
+
+document.getElementById("sendOut").addEventListener("click", function () {
+  const messageElement = document.getElementById("message");
+  const notesValue = document.getElementById("notes").value.trim();
+
+  if (notesValue === "") {
+    // Zobrazí zprávu, pokud je text-area prázdná
+    messageElement.textContent = "Zadejte zprávu !";
+    messageElement.style.color = "red";
+  } else {
+    // Zobrazí zprávu o odeslání
+    messageElement.textContent = "Zpráva byla odeslána!";
+    document.getElementById("message").style.color = "green";
+    
+    // Vymaže obsah text-area
+    document.getElementById("notes").value = "";
+
+    // Po 10 sekundách odstraní zprávu
+    setTimeout(function () {
+      messageElement.textContent = "";
+    }, 10000);
+  }
+});
